@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Joe N | DevSecOps Architect</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0a0f1c;
+color:white;
+scroll-behavior:smooth;
+}
+
+header{
+padding:120px 20px;
+text-align:center;
+background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+header h1{
+font-size:55px;
+color:#38bdf8;
+}
+
+header p{
+font-size:20px;
+color:#94a3b8;
+}
+
+nav{
+position:sticky;
+top:0;
+background:black;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#38bdf8;
+font-weight:bold;
+font-size:14px;
+}
+
+section{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.card{
+background:#020617;
+padding:25px;
+border-radius:10px;
+margin-bottom:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+ul{
+line-height:1.7;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Joe N</h1>
+
+<p>DevSecOps Architect</p>
+
+<p>Cloud Security • Secure Architecture • DevSecOps Automation</p>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#appsec">AppSec</a>
+
+<a href="#cloud">Cloud Security</a>
+
+<a href="#infra">Infrastructure</a>
+
+<a href="#k8s">Containers</a>
+
+<a href="#iam">IAM</a>
+
+<a href="#network">Network</a>
+
+<a href="#pipeline">Pipeline</a>
+
+<a href="#grc">GRC</a>
+
+<a href="#data">Data</a>
+
+<a href="#runtime">Runtime</a>
+
+<a href="#threat">Threat Modeling</a>
+
+<a href="#supply">Supply Chain</a>
+
+<a href="#crypto">Cryptography</a>
+
+<a href="#incident">Incident Response</a>
+
+</nav>
+
+<section id="about">
+
+<h2>About</h2>
+
+<div class="card">
+
+DevSecOps Architect specializing in secure cloud platforms,
+automated security pipelines, and modern infrastructure protection.
+
+Focused on integrating security across the full software lifecycle
+from development to production environments.
+
+</div>
+
+</section>
+
+<section id="appsec">
+
+<h2>Application Security (AppSec)</h2>
+
+<div class="card">
+
+<ul>
+<li>SAST / DAST / IAST</li>
+<li>Software Composition Analysis (SCA)</li>
+<li>Secure SDLC</li>
+<li>Threat modeling (STRIDE)</li>
+<li>OWASP Top 10</li>
+<li>API Security</li>
+<li>Secure coding practices</li>
+<li>Code signing</li>
+</ul>
+
+Tools: SonarQube, Checkmarx, Snyk, Veracode, GitHub Advanced Security
+
+</div>
+
+</section>
+
+<section id="cloud">
+
+<h2>Cloud Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Shared Responsibility Model</li>
+<li>IAM Architecture</li>
+<li>Cloud Network Segmentation</li>
+<li>Encryption at Rest and in Transit</li>
+<li>CSPM / CIEM</li>
+<li>CNAPP / WIZ</li>
+<li>Secrets Management</li>
+<li>KMS & HSM</li>
+<li>Cloud Logging & Monitoring</li>
+
+</ul>
+
+Cloud Platforms: AWS, Azure, Google Cloud
+
+</div>
+
+</section>
+
+<section id="infra">
+
+<h2>Infrastructure Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Terraform Security Scanning</li>
+<li>Kubernetes Hardening</li>
+<li>Container Security</li>
+<li>Image Scanning</li>
+<li>Host Hardening</li>
+<li>Patch Management</li>
+<li>Bastion Host Architecture</li>
+<li>Zero Trust Infrastructure</li>
+
+</ul>
+
+Tools: Wiz, Prisma Cloud, Aqua Security, Trivy, Falco, HashiCorp Vault
+
+</div>
+
+</section>
+
+<section id="k8s">
+
+<h2>Container & Kubernetes Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Admission Controllers</li>
+<li>Pod Security Standards</li>
+<li>RBAC</li>
+<li>Network Policies</li>
+<li>Service Mesh Security</li>
+<li>Runtime Protection</li>
+<li>Image Provenance</li>
+<li>SBOM / Supply Chain Security</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="iam">
+
+<h2>Identity & Access Management</h2>
+
+<div class="card">
+
+<ul>
+
+<li>RBAC vs ABAC</li>
+<li>SSO</li>
+<li>OAuth2</li>
+<li>OIDC</li>
+<li>SAML</li>
+<li>PAM</li>
+<li>Least Privilege Model</li>
+<li>Federation</li>
+<li>Just-in-Time Access</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="network">
+
+<h2>Network Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Firewalls</li>
+<li>Web Application Firewalls (WAF)</li>
+<li>IDS / IPS</li>
+<li>VPN Architecture</li>
+<li>TLS Security</li>
+<li>Micro-segmentation</li>
+<li>Load Balancer Security</li>
+<li>Zero Trust Networking</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="pipeline">
+
+<h2>DevSecOps Pipeline Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Secure CI/CD pipelines</li>
+<li>Branch protection rules</li>
+<li>Artifact signing</li>
+<li>Secrets scanning</li>
+<li>Pipeline RBAC</li>
+<li>Build server isolation</li>
+<li>Supply chain attack protection</li>
+<li>Reproducible builds</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="grc">
+
+<h2>Governance Risk & Compliance</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Risk assessment frameworks</li>
+<li>Policy as Code</li>
+<li>Compliance automation</li>
+<li>Audit logging</li>
+<li>Security KPIs / KRIs</li>
+<li>Control mapping</li>
+
+</ul>
+
+Frameworks:
+
+NIST • ISO 27001 • SOC 2 • CIS Benchmarks • FedRAMP
+
+</div>
+
+</section>
+
+<section id="data">
+
+<h2>Data Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Data classification</li>
+<li>Data Loss Prevention</li>
+<li>Tokenization</li>
+<li>Data masking</li>
+<li>Encryption strategies</li>
+<li>Key rotation</li>
+<li>Database security</li>
+<li>Backup protection</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="runtime">
+
+<h2>Endpoint & Runtime Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>EDR / XDR</li>
+<li>Host firewalls</li>
+<li>Runtime anomaly detection</li>
+<li>SIEM log aggregation</li>
+<li>Endpoint monitoring</li>
+<li>Incident response integration</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="threat">
+
+<h2>Threat Modeling & Architecture</h2>
+
+<div class="card">
+
+<ul>
+
+<li>STRIDE threat modeling</li>
+<li>Attack surface reduction</li>
+<li>Secure architecture diagrams</li>
+<li>Cyber kill chain analysis</li>
+<li>Red team / blue team collaboration</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="supply">
+
+<h2>Supply Chain Security</h2>
+
+<div class="card">
+
+<ul>
+
+<li>SBOM generation</li>
+<li>Dependency pinning</li>
+<li>Provenance verification</li>
+<li>Artifact signing (Sigstore)</li>
+<li>Third-party risk management</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="crypto">
+
+<h2>Cryptography Fundamentals</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Symmetric vs Asymmetric Encryption</li>
+<li>TLS Handshake</li>
+<li>Public Key Infrastructure</li>
+<li>Certificate Lifecycle</li>
+<li>Hashing vs Encryption</li>
+<li>HMAC</li>
+<li>Digital Signatures</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="incident">
+
+<h2>Incident Response & Monitoring</h2>
+
+<div class="card">
+
+<ul>
+
+<li>SIEM architecture</li>
+<li>Alert triage</li>
+<li>Security runbooks</li>
+<li>SOAR automation</li>
+<li>Forensics basics</li>
+<li>Post-incident analysis</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Joe N | DevSecOps Architect
+
+</footer>
+
+</body>
+
+</html>
