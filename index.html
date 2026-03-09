@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,13 +8,16 @@
 
 <style>
 
+html{scroll-behavior:smooth;}
+
 body{
 margin:0;
 font-family:Arial;
-background:#0a0f1c;
-color:white;
-scroll-behavior:smooth;
+background:#050b16;
+color:#e5e7eb;
 }
+
+/* HEADER */
 
 header{
 padding:120px 20px;
@@ -25,14 +26,16 @@ background:linear-gradient(135deg,#020617,#0f172a);
 }
 
 header h1{
-font-size:55px;
+font-size:56px;
 color:#38bdf8;
 }
 
 header p{
-font-size:20px;
 color:#94a3b8;
+font-size:20px;
 }
+
+/* NAV */
 
 nav{
 position:sticky;
@@ -40,15 +43,18 @@ top:0;
 background:black;
 padding:15px;
 text-align:center;
+z-index:10;
 }
 
 nav a{
-margin:10px;
-text-decoration:none;
 color:#38bdf8;
+text-decoration:none;
+margin:10px;
 font-weight:bold;
 font-size:14px;
 }
+
+/* SECTIONS */
 
 section{
 max-width:1200px;
@@ -61,32 +67,120 @@ color:#38bdf8;
 margin-bottom:20px;
 }
 
+/* CARDS */
+
 .card{
 background:#020617;
 padding:25px;
 border-radius:10px;
 margin-bottom:25px;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
+box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
+
+/* GRID */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
-ul{
-line-height:1.7;
+/* TERMINAL */
+
+.terminal{
+background:black;
+padding:20px;
+font-family:monospace;
+color:#22c55e;
+height:220px;
+overflow:hidden;
+border-radius:8px;
 }
+
+/* PIPELINE */
+
+.pipeline{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.stage{
+padding:15px 25px;
+background:#020617;
+border:1px solid #38bdf8;
+border-radius:6px;
+animation:flow 6s infinite;
+}
+
+@keyframes flow{
+0%{opacity:.3}
+50%{opacity:1}
+100%{opacity:.3}
+}
+
+/* ATTACK MAP */
+
+.map{
+height:300px;
+background:black;
+position:relative;
+overflow:hidden;
+}
+
+.attack{
+width:8px;
+height:8px;
+background:red;
+position:absolute;
+border-radius:50%;
+animation:attack 4s linear infinite;
+}
+
+@keyframes attack{
+0%{transform:translate(0,0)}
+100%{transform:translate(600px,200px)}
+}
+
+/* TOOL LOGOS */
+
+.tools img{
+width:50px;
+filter:grayscale(1);
+transition:.3s;
+}
+
+.tools img:hover{
+filter:none;
+transform:scale(1.2);
+}
+
+/* 3D CLOUD */
+
+.cloud3d{
+perspective:800px;
+}
+
+.cluster{
+width:200px;
+height:120px;
+border:2px solid #38bdf8;
+transform:rotateX(20deg) rotateY(20deg);
+margin:auto;
+padding:20px;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 background:black;
+margin-top:40px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -94,44 +188,20 @@ background:black;
 <header>
 
 <h1>Joe N</h1>
-
 <p>DevSecOps Architect</p>
-
-<p>Cloud Security • Secure Architecture • DevSecOps Automation</p>
+<p>Cloud Security • DevSecOps Automation • Secure Architecture</p>
 
 </header>
 
 <nav>
 
 <a href="#about">About</a>
-
-<a href="#appsec">AppSec</a>
-
-<a href="#cloud">Cloud Security</a>
-
-<a href="#infra">Infrastructure</a>
-
-<a href="#k8s">Containers</a>
-
-<a href="#iam">IAM</a>
-
-<a href="#network">Network</a>
-
+<a href="#terminal">Terminal</a>
 <a href="#pipeline">Pipeline</a>
-
-<a href="#grc">GRC</a>
-
-<a href="#data">Data</a>
-
-<a href="#runtime">Runtime</a>
-
-<a href="#threat">Threat Modeling</a>
-
-<a href="#supply">Supply Chain</a>
-
-<a href="#crypto">Cryptography</a>
-
-<a href="#incident">Incident Response</a>
+<a href="#architecture">Architecture</a>
+<a href="#attack">Attack Map</a>
+<a href="#tools">Tools</a>
+<a href="#projects">Projects</a>
 
 </nav>
 
@@ -142,354 +212,97 @@ background:black;
 <div class="card">
 
 DevSecOps Architect specializing in secure cloud platforms,
-automated security pipelines, and modern infrastructure protection.
+automated security pipelines, and enterprise cloud security architecture.
 
-Focused on integrating security across the full software lifecycle
-from development to production environments.
-
-</div>
-
-</section>
-
-<section id="appsec">
-
-<h2>Application Security (AppSec)</h2>
-
-<div class="card">
-
-<ul>
-<li>SAST / DAST / IAST</li>
-<li>Software Composition Analysis (SCA)</li>
-<li>Secure SDLC</li>
-<li>Threat modeling (STRIDE)</li>
-<li>OWASP Top 10</li>
-<li>API Security</li>
-<li>Secure coding practices</li>
-<li>Code signing</li>
-</ul>
-
-Tools: SonarQube, Checkmarx, Snyk, Veracode, GitHub Advanced Security
+Focused on integrating security into CI/CD pipelines,
+Kubernetes infrastructure, and cloud-native environments.
 
 </div>
 
 </section>
 
-<section id="cloud">
+<section id="terminal">
 
-<h2>Cloud Security</h2>
+<h2>Live DevSecOps Terminal</h2>
 
-<div class="card">
-
-<ul>
-
-<li>Shared Responsibility Model</li>
-<li>IAM Architecture</li>
-<li>Cloud Network Segmentation</li>
-<li>Encryption at Rest and in Transit</li>
-<li>CSPM / CIEM</li>
-<li>CNAPP / WIZ</li>
-<li>Secrets Management</li>
-<li>KMS & HSM</li>
-<li>Cloud Logging & Monitoring</li>
-
-</ul>
-
-Cloud Platforms: AWS, Azure, Google Cloud
-
-</div>
-
-</section>
-
-<section id="infra">
-
-<h2>Infrastructure Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Terraform Security Scanning</li>
-<li>Kubernetes Hardening</li>
-<li>Container Security</li>
-<li>Image Scanning</li>
-<li>Host Hardening</li>
-<li>Patch Management</li>
-<li>Bastion Host Architecture</li>
-<li>Zero Trust Infrastructure</li>
-
-</ul>
-
-Tools: Wiz, Prisma Cloud, Aqua Security, Trivy, Falco, HashiCorp Vault
-
-</div>
-
-</section>
-
-<section id="k8s">
-
-<h2>Container & Kubernetes Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Admission Controllers</li>
-<li>Pod Security Standards</li>
-<li>RBAC</li>
-<li>Network Policies</li>
-<li>Service Mesh Security</li>
-<li>Runtime Protection</li>
-<li>Image Provenance</li>
-<li>SBOM / Supply Chain Security</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="iam">
-
-<h2>Identity & Access Management</h2>
-
-<div class="card">
-
-<ul>
-
-<li>RBAC vs ABAC</li>
-<li>SSO</li>
-<li>OAuth2</li>
-<li>OIDC</li>
-<li>SAML</li>
-<li>PAM</li>
-<li>Least Privilege Model</li>
-<li>Federation</li>
-<li>Just-in-Time Access</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="network">
-
-<h2>Network Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Firewalls</li>
-<li>Web Application Firewalls (WAF)</li>
-<li>IDS / IPS</li>
-<li>VPN Architecture</li>
-<li>TLS Security</li>
-<li>Micro-segmentation</li>
-<li>Load Balancer Security</li>
-<li>Zero Trust Networking</li>
-
-</ul>
-
-</div>
+<div class="terminal" id="terminal"></div>
 
 </section>
 
 <section id="pipeline">
 
-<h2>DevSecOps Pipeline Security</h2>
+<h2>CI/CD DevSecOps Pipeline</h2>
 
-<div class="card">
+<div class="pipeline">
 
-<ul>
-
-<li>Secure CI/CD pipelines</li>
-<li>Branch protection rules</li>
-<li>Artifact signing</li>
-<li>Secrets scanning</li>
-<li>Pipeline RBAC</li>
-<li>Build server isolation</li>
-<li>Supply chain attack protection</li>
-<li>Reproducible builds</li>
-
-</ul>
+<div class="stage">Code</div>
+<div class="stage">SAST</div>
+<div class="stage">Dependency Scan</div>
+<div class="stage">Container Scan</div>
+<div class="stage">Deploy</div>
+<div class="stage">Runtime Security</div>
 
 </div>
 
 </section>
 
-<section id="grc">
+<section id="architecture">
 
-<h2>Governance Risk & Compliance</h2>
+<h2>3D Cloud Infrastructure</h2>
 
-<div class="card">
+<div class="card cloud3d">
 
-<ul>
+<div class="cluster">
 
-<li>Risk assessment frameworks</li>
-<li>Policy as Code</li>
-<li>Compliance automation</li>
-<li>Audit logging</li>
-<li>Security KPIs / KRIs</li>
-<li>Control mapping</li>
-
-</ul>
-
-Frameworks:
-
-NIST • ISO 27001 • SOC 2 • CIS Benchmarks • FedRAMP
-
-</div>
-
-</section>
-
-<section id="data">
-
-<h2>Data Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Data classification</li>
-<li>Data Loss Prevention</li>
-<li>Tokenization</li>
-<li>Data masking</li>
-<li>Encryption strategies</li>
-<li>Key rotation</li>
-<li>Database security</li>
-<li>Backup protection</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="runtime">
-
-<h2>Endpoint & Runtime Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>EDR / XDR</li>
-<li>Host firewalls</li>
-<li>Runtime anomaly detection</li>
-<li>SIEM log aggregation</li>
-<li>Endpoint monitoring</li>
-<li>Incident response integration</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="threat">
-
-<h2>Threat Modeling & Architecture</h2>
-
-<div class="card">
-
-<ul>
-
-<li>STRIDE threat modeling</li>
-<li>Attack surface reduction</li>
-<li>Secure architecture diagrams</li>
-<li>Cyber kill chain analysis</li>
-<li>Red team / blue team collaboration</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="supply">
-
-<h2>Supply Chain Security</h2>
-
-<div class="card">
-
-<ul>
-
-<li>SBOM generation</li>
-<li>Dependency pinning</li>
-<li>Provenance verification</li>
-<li>Artifact signing (Sigstore)</li>
-<li>Third-party risk management</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="crypto">
-
-<h2>Cryptography Fundamentals</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Symmetric vs Asymmetric Encryption</li>
-<li>TLS Handshake</li>
-<li>Public Key Infrastructure</li>
-<li>Certificate Lifecycle</li>
-<li>Hashing vs Encryption</li>
-<li>HMAC</li>
-<li>Digital Signatures</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="incident">
-
-<h2>Incident Response & Monitoring</h2>
-
-<div class="card">
-
-<ul>
-
-<li>SIEM architecture</li>
-<li>Alert triage</li>
-<li>Security runbooks</li>
-<li>SOAR automation</li>
-<li>Forensics basics</li>
-<li>Post-incident analysis</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="card contact">
-
-📞 Phone:  
-<a href="tel:4437904687">443-790-4687</a>
+Kubernetes Cluster
 
 <br><br>
 
-📧 Email:  
-<a href="mailto:nmjoe2211@gmail.com">nmjoe2211@gmail.com</a>
-
-<br><br>
-
-💼 LinkedIn:  
-Add your LinkedIn profile here
+Pods • RBAC • Network Policies  
+Service Mesh • Runtime Security
 
 </div>
+
+</div>
+
+</section>
+
+<section id="attack">
+
+<h2>Attack Simulation Map</h2>
+
+<div class="map">
+
+<div class="attack"></div>
+<div class="attack" style="top:40px"></div>
+<div class="attack" style="top:120px"></div>
+
+</div>
+
+</section>
+
+<section id="tools">
+
+<h2>Security Tools</h2>
+
+<div class="grid tools">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>GitHub Projects</h2>
+
+<div id="repos" class="grid"></div>
 
 </section>
 
@@ -499,6 +312,59 @@ Add your LinkedIn profile here
 
 </footer>
 
-</body>
+<script>
 
+/* TERMINAL */
+
+const lines=[
+"terraform init",
+"terraform apply",
+"docker build secure-app",
+"trivy image scan",
+"sonarqube analyzing code",
+"snyk vulnerability scan",
+"kubectl deploying cluster",
+"pipeline completed ✔"
+];
+
+let i=0;
+
+function type(){
+if(i<lines.length){
+document.getElementById("terminal").innerHTML+=
+"$ "+lines[i]+"<br>";
+i++;
+setTimeout(type,800);
+}
+}
+
+type();
+
+/* GITHUB PROJECT IMPORT */
+
+fetch("https://api.github.com/users/njoe-dev/repos")
+.then(res=>res.json())
+.then(data=>{
+
+let html="";
+
+data.slice(0,6).forEach(repo=>{
+
+html+=`
+<div class="card">
+<h3>${repo.name}</h3>
+<p>${repo.description || "DevSecOps project"}</p>
+<a href="${repo.html_url}" target="_blank">View Repo</a>
+</div>
+`;
+
+});
+
+document.getElementById("repos").innerHTML=html;
+
+});
+
+</script>
+
+</body>
 </html>
